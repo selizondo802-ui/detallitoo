@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuánto te amo</title>
+    <link rel="stylesheet" href="css/estiloss.css">
+</head>
+<body>
+
+<div class="pagina visible" style="background-color: var(--rosa);">
+    <h1>💕 Cuánto te amo 💕</h1>
+    <div class="texto">
+        Sinceramente no puedo explicar cuanto te amo, pero te puedo dar ejemplitos. Te amo tanto como amo a las sandías, te amo tanto como amo comer, te amo tanto como goku ama pelear, te amo tanto como amas dormir, te amo de aquí a la luna a pasitos de tortuga muerta, te amo de aquí a donde está Diosito a pasitos de gallina sin patas, te amo infinitamente mi amor.
+    </div>
+    <div class="fotos">
+        <img src="img/dela1.jpg" alt="Foto 1">
+        <img src="img/dela2.jpg" alt="Foto 2">
+        <img src="img/dela3.jpg" alt="Foto 3">
+    </div>
+    <button onclick="location.href='index.html'">Regresar</button>
+    <div class="corazones-flores" id="corazonesCuanto"></div>
+</div>
+
+<script>
+function crearCorazones(id) {
+    const contenedor = document.getElementById(id);
+    for (let i = 0; i < 20; i++) {
+        const corazon = document.createElement('div');
+        corazon.className = 'corazon';
+        corazon.style.left = Math.random() * 100 + 'vw';
+        corazon.style.animationDuration = (5 + Math.random() * 5) + 's';
+        corazon.style.fontSize = (20 + Math.random() * 20) + 'px';
+        corazon.innerText = '💕';
+        contenedor.appendChild(corazon);
+    }
+}
+crearCorazones('corazonesCuanto');
+</script>
+
+</body>
+</html>
